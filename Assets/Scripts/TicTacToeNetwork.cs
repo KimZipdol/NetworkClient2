@@ -31,8 +31,10 @@ public class TicTacToeNetwork : MonoBehaviour
 
     public void Close()
     {
-        socket.Close();
-    }
+		socket.Close();
+		UnityEditor.EditorApplication.isPlaying = false;
+		Application.Quit();
+	}
 
     private void Start()
     {
