@@ -88,7 +88,7 @@ public class LoginManager : MonoBehaviour {
         string postData = JsonUtility.ToJson(form);
 
         using (UnityWebRequest www = 
-            UnityWebRequest.Put("http://localhost:3000/users/signin", postData))
+            UnityWebRequest.Put("https://tictactoejimoonkim.herokuapp.com/users/signin", postData))
         {
             www.method = "POST";
             www.SetRequestHeader("Content-Type", "application/json");
@@ -162,7 +162,7 @@ public class LoginManager : MonoBehaviour {
         string postData = JsonUtility.ToJson(form);
         byte[] sendData = Encoding.UTF8.GetBytes(postData);
 
-        using (UnityWebRequest www = UnityWebRequest.Put("http://localhost:3000/users/add", postData))
+        using (UnityWebRequest www = UnityWebRequest.Put("https://tictactoejimoonkim.herokuapp.com/users/add", postData))
         {
             www.method = "POST";
             www.SetRequestHeader("Content-Type", "application/json");

@@ -273,4 +273,11 @@ public class TicTacToeManager : MonoBehaviour
         gameOverPanel.DOLocalMoveY(0, 10).SetEase(Ease.InOutBack);
         gameOverPanel.GetComponent<CanvasGroup>().DOFade(1, 10);
     }
+
+	public void CloseGameOverPanel()
+	{
+		//gameOverPanel.anchoredPosition = new Vector2(0, 0);
+		gameOverPanel.DOLocalMoveY(600, 5).SetEase(Ease.InOutBack);
+		gameOverPanel.GetComponent<CanvasGroup>().DOFade(0, 10);
+	}
 }
